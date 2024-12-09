@@ -1,0 +1,252 @@
+
+/* General Body Styling */
+body {
+    background: linear-gradient(to right, #a8edea, #fed6e3); /* Lighter and softer gradient */
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 8px;
+    box-shadow: none;
+    border: 1px solid #d2d6de;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #6b72f3;
+    box-shadow: 0 0 8px rgba(107, 114, 243, 0.5);
+}
+
+/* Select Box Styling */
+.selectBox {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selectBox:focus {
+    border-color: #6b72f3;
+    box-shadow: 0 4px 8px rgba(107, 114, 243, 0.3);
+}
+
+/* Suggestions Box */
+.suggestionsBox {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d2d6de;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+/* Individual Suggestion */
+.suggestionsBox .suggestionItem {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.suggestionsBox .suggestionItem:hover {
+    background: #6b72f3;
+    color: #fff;
+}
+
+.suggestionsBox .suggestionItem:last-child {
+    border-bottom: none;
+}
+
+/* Search Section */
+.searchSec {
+    background: linear-gradient(to bottom, #a8edea, #fed6e3); /* Lightened gradient */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.search {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.submitBtn {
+    background: linear-gradient(to right, #6b72f3, #a6bdf4); /* Lightened button gradient */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submitBtn:hover {
+    background: linear-gradient(to right, #6b72f3, #929df5);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.submitBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Section */
+.formSec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+/* Flex Container for Cards */
+.cont {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next row if needed */
+    justify-content: space-between; /* Even spacing between cards */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between cards */
+    margin: 2rem auto; /* Center the container */
+    max-width: 1200px; /* Optional: Limit the width of the card container */
+    padding: 0 1rem; /* Add some padding on smaller screens */
+}
+
+/* Individual News Card */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(33.333% - 20px); /* Responsive: 3 cards per row */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically within the card */
+}
+
+.card img {
+    width: 100%; /* Images take full width of the card */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the image */
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Card Content */
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media(max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row for medium screens */
+    }
+}
+
+@media(max-width: 768px) {
+    .card {
+        flex: 1 1 calc(100% - 20px); /* 1 card per row for small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    .formSec {
+        padding: 1.5rem 1rem;
+    }
+
+    .search {
+        font-size: 1rem;
+    }
+
+    .selectBox, .suggestionsBox {
+        max-width: 90%;
+    }
+}
+
+@media(max-width: 480px) {
+    .form-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .selectBox, .suggestionsBox {
+        max-width: 100%;
+    }
+
+    .submitBtn {
+        width: 80%;
+    }
+
+    .search {
+        font-size: 0.9rem;
+    }
+}
